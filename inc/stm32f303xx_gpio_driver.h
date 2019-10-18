@@ -11,14 +11,6 @@
 #include "stm32f303xe.h"
 
 /*
- * This a Handle structure for a GPIO pin
- */
-typedef struct {
-	GPIO_RegDef_t *pGPIOx_base;			//pointer to hold the address of the GPIO peripheral
-	GPIO_PinConfig_t GPIO_PinConfig;	//structure to hold GPIO pin settings
-} GPIO_Handle_t;
-
-/*
  * This is a Configuration structure for a GPIO pin
  */
 
@@ -30,6 +22,14 @@ typedef struct {
 	uint8_t GPIO_PinOpType;			// possible values from @GPIO_PIN_OP_TYPES
 	uint8_t GPIO_PinAltFunMode;
 } GPIO_PinConfig_t;
+
+/*
+ * This a Handle structure for a GPIO pin
+ */
+typedef struct {
+	GPIO_RegDef_t *pGPIOx_base;			//pointer to hold the address of the GPIO peripheral
+	GPIO_PinConfig_t GPIO_PinConfig;	//structure to hold GPIO pin settings
+} GPIO_Handle_t;
 
 /*
  * @GPIO_PIN_NUMBERS
