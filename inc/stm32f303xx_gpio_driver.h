@@ -27,7 +27,7 @@ typedef struct {
  * This a Handle structure for a GPIO pin
  */
 typedef struct {
-	GPIO_RegDef_t *pGPIOx_base;			//pointer to hold the address of the GPIO peripheral
+	GPIO_RegDef_t *pGPIOx_base;	//pointer to hold the address of the GPIO peripheral
 	GPIO_PinConfig_t GPIO_PinConfig;	//structure to hold GPIO pin settings
 } GPIO_Handle_t;
 
@@ -108,7 +108,6 @@ typedef struct {
 #define GPIO_AF14			14
 #define GPIO_AF15			15
 
-
 /***************************************************************************************************
  * 							APIs supported by the driver
  ***************************************************************************************************/
@@ -129,7 +128,8 @@ void GPIO_DeInit(GPIO_RegDef_t *pGPIOx);
  */
 uint8_t GPIO_ReadInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
 uint16_t GPIO_ReadInputPort(GPIO_RegDef_t *pGPIOx);
-void GPIO_WriteOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value);
+void GPIO_WriteOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber,
+		uint8_t Value);
 void GPIO_WriteOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value);
 void GPIO_ToggleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
 
@@ -139,6 +139,5 @@ void GPIO_ToggleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
 void GPIO_IRQConfig(uint8_t IRQNumber, bool EnorDi);
 void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority);
 void GPIO_IRQHandling(uint8_t PinNumber);
-
 
 #endif /* INC_STM32F303XX_GPIO_DRIVER_H_ */
