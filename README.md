@@ -2,7 +2,7 @@
 STM32F303RE Drivers (In progress)  
 
 ```
-project
+STM32F303RE_Drivers
 │   README.md   
 │
 └───inc
