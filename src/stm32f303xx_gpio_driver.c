@@ -12,17 +12,17 @@
  * Peripheral Clock Setup
  */
 /************************************************************************************
- * @fn			- GPIO_PeriClockControl
+ * @fn      - GPIO_PeriClockControl
  *
- * @brief		- This function enables or disables peripheral clock for the given
- * 				  GPIO port
+ * @brief   - This function enables or disables peripheral clock for the given
+ *            GPIO port
  *
- * @param[in]	pGPIOx		- Base address of the GPIO peripheral
- * @param[in]	EnorDi		- ENABLE or DISABLE macros
+ * @param[in]	pGPIOx    - Base address of the GPIO peripheral
+ * @param[in]	EnorDi    - ENABLE or DISABLE macros
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, bool EnorDi) {
   //check valid address
@@ -75,17 +75,17 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, bool EnorDi) {
  * Init and De-init
  */
 /************************************************************************************
- * @fn			- GPIO_Init
+ * @fn      - GPIO_Init
  *
- * @brief		- This function initialize the GPIO peripheral registers according
- * 				  to the configuration structure passed as input
+ * @brief   - This function initialize the GPIO peripheral registers according
+ *            to the configuration structure passed as input
  *
- * @param[in]	pGPIOHandle		- pointer to GPIO handling structure, used to
- * 								  retrieve the GPIO base address and its configuration
+ * @param[in] pGPIOHandle   - pointer to GPIO handling structure, used to
+ *                            retrieve the GPIO base address and its configuration
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 
@@ -164,16 +164,16 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
 }
 
 /************************************************************************************
- * @fn			- GPIO_DeInit
+ * @fn      - GPIO_DeInit
  *
- * @brief		- This function de-initialize the GPIO peripheral registers writing
- * 				  to the Peripheral Reset Register in the RCC block
+ * @brief   - This function de-initialize the GPIO peripheral registers writing
+ *            to the Peripheral Reset Register in the RCC block
  *
- * @param[in]	pGPIOx		- base address of the GPIO peripheral
+ * @param[in]	pGPIOx    - base address of the GPIO peripheral
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_DeInit(GPIO_RegDef_t *pGPIOx) {
   //check input GPIO is valid
@@ -204,17 +204,17 @@ void GPIO_DeInit(GPIO_RegDef_t *pGPIOx) {
  * Data read and write
  */
 /************************************************************************************
- * @fn			- GPIO_ReadInputPin
+ * @fn      - GPIO_ReadInputPin
  *
- * @brief		- This function reads the value of the GPIO pin passed as input
- * 				  parameter
+ * @brief   - This function reads the value of the GPIO pin passed as input
+ *            parameter
  *
- * @param[in]	pGPIOx		- base address of the GPIO peripheral
- * 				PinNumber	- pin number to be read
+ * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ *            PinNumber - pin number to be read
  *
- * @return		- pin value read from input data register
+ * @return  - pin value read from input data register
  *
- * @Note		- none
+ * @Note    - none
  */
 uint8_t GPIO_ReadInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber) {
 
@@ -224,16 +224,16 @@ uint8_t GPIO_ReadInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber) {
 }
 
 /************************************************************************************
- * @fn			- GPIO_ReadInputPort
+ * @fn      - GPIO_ReadInputPort
  *
- * @brief		- This function reads the value of the GPIO port passed as input
- * 				  parameter
+ * @brief   - This function reads the value of the GPIO port passed as input
+ *            parameter
  *
- * @param[in]	pGPIOx		- base address of the GPIO peripheral
+ * @param[in]	pGPIOx    - base address of the GPIO peripheral
  *
- * @return		- port value read from input data register
+ * @return  - port value read from input data register
  *
- * @Note		- none
+ * @Note    - none
  */
 uint16_t GPIO_ReadInputPort(GPIO_RegDef_t *pGPIOx) {
 
@@ -243,17 +243,17 @@ uint16_t GPIO_ReadInputPort(GPIO_RegDef_t *pGPIOx) {
 }
 
 /************************************************************************************
- * @fn			- GPIO_WriteOutputPin
+ * @fn      - GPIO_WriteOutputPin
  *
- * @brief		- This function writes the value of a GPIO pin
+ * @brief   - This function writes the value of a GPIO pin
  *
- * @param[in]	pGPIOx		- base address of the GPIO peripheral
- * 				PinNumber	- pin number to be written
- * 				Value		- value to be written (GPIO_PIN_SET/GPIO_PIN_RESET)
+ * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ *            PinNumber - pin number to be written
+ *            Value     - value to be written (GPIO_PIN_SET/GPIO_PIN_RESET)
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_WriteOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber,
     uint8_t Value) {
@@ -266,16 +266,16 @@ void GPIO_WriteOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber,
 }
 
 /************************************************************************************
- * @fn			- GPIO_WriteOutputPort
+ * @fn      - GPIO_WriteOutputPort
  *
- * @brief		- This function writes the value of a GPIO port
+ * @brief   - This function writes the value of a GPIO port
  *
- * @param[in]	pGPIOx		- base address of the GPIO peripheral
- * 				Value		- value to be written (GPIO_PIN_SET/GPIO_PIN_RESET)
+ * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ *            Value     - value to be written (GPIO_PIN_SET/GPIO_PIN_RESET)
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_WriteOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value) {
 
@@ -283,16 +283,16 @@ void GPIO_WriteOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value) {
 }
 
 /************************************************************************************
- * @fn			- GPIO_ToggleOutputPin
+ * @fn      - GPIO_ToggleOutputPin
  *
- * @brief		- This function toggles the value of a GPIO pin
+ * @brief   - This function toggles the value of a GPIO pin
  *
- * @param[in]	pGPIOx		- base address of the GPIO peripheral
- * 				PinNumber	- pin number to be toggled
+ * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ *            PinNumber - pin number to be toggled
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_ToggleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber) {
 
@@ -303,17 +303,17 @@ void GPIO_ToggleOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber) {
  * IRQ configuration (processor side)
  */
 /************************************************************************************
- * @fn			- GPIO_IRQConfig
+ * @fn      - GPIO_IRQConfig
  *
- * @brief		- This function configures the NVIC to enable/disable an interrupt
- * 				  coming from a given IRQ number (IRQ_NO_EXTI*)
+ * @brief   - This function configures the NVIC to enable/disable an interrupt
+ *            coming from a given IRQ number (IRQ_NO_EXTI*)
  *
- * @param[in]	IRQNumber	- IRQ number of the EXTI line
- * 				EnorDi		- enable/disable interrupt flag
+ * @param[in] IRQNumber - IRQ number of the EXTI line
+ *            EnorDi    - enable/disable interrupt flag
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_IRQConfig(uint8_t IRQNumber, bool EnorDi) {
   if (EnorDi == ENABLE) {
@@ -336,17 +336,17 @@ void GPIO_IRQConfig(uint8_t IRQNumber, bool EnorDi) {
 }
 
 /************************************************************************************
- * @fn			- GPIO_IRQPriorityConfig
+ * @fn      - GPIO_IRQPriorityConfig
  *
- * @brief		- This function configures the IRQ priority of a given IRQ number
- * 				  (IRQ_NO_EXTI*) in the NVIC
+ * @brief   - This function configures the IRQ priority of a given IRQ number
+ *            (IRQ_NO_EXTI*) in the NVIC
  *
- * @param[in]	IRQNumber	- IRQ number of the EXTI line
- * 				IRQPriority	- IRQ priority number
+ * @param[in]	IRQNumber   - IRQ number of the EXTI line
+ *            IRQPriority - IRQ priority number
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority) {
   uint8_t reg_n = IRQNumber / 4;
@@ -358,16 +358,16 @@ void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority) {
 }
 
 /************************************************************************************
- * @fn			- GPIO_IRQHandling
+ * @fn      - GPIO_IRQHandling
  *
- * @brief		- This function tests and clears the EXTI pending register of the
- * 				  GPIO pin number triggering the interrupt
+ * @brief   - This function tests and clears the EXTI pending register of the
+ *            GPIO pin number triggering the interrupt
  *
  * @param[in]	PinNumber	- pin number triggering the interrupt
  *
- * @return		- none
+ * @return  - none
  *
- * @Note		- none
+ * @Note    - none
  */
 void GPIO_IRQHandling(uint8_t PinNumber) {
   if ((EXTI->EXTI_PR1 & (1 << PinNumber))) {
