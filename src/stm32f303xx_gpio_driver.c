@@ -169,7 +169,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
  * @brief   - This function de-initialize the GPIO peripheral registers writing
  *            to the Peripheral Reset Register in the RCC block
  *
- * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ * @param[in] pGPIOx    - base address of the GPIO peripheral
  *
  * @return  - none
  *
@@ -209,7 +209,7 @@ void GPIO_DeInit(GPIO_RegDef_t *pGPIOx) {
  * @brief   - This function reads the value of the GPIO pin passed as input
  *            parameter
  *
- * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ * @param[in] pGPIOx    - base address of the GPIO peripheral
  *            PinNumber - pin number to be read
  *
  * @return  - pin value read from input data register
@@ -247,7 +247,7 @@ uint16_t GPIO_ReadInputPort(GPIO_RegDef_t *pGPIOx) {
  *
  * @brief   - This function writes the value of a GPIO pin
  *
- * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ * @param[in] pGPIOx    - base address of the GPIO peripheral
  *            PinNumber - pin number to be written
  *            Value     - value to be written (GPIO_PIN_SET/GPIO_PIN_RESET)
  *
@@ -270,7 +270,7 @@ void GPIO_WriteOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber,
  *
  * @brief   - This function writes the value of a GPIO port
  *
- * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ * @param[in] pGPIOx    - base address of the GPIO peripheral
  *            Value     - value to be written (GPIO_PIN_SET/GPIO_PIN_RESET)
  *
  * @return  - none
@@ -287,7 +287,7 @@ void GPIO_WriteOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value) {
  *
  * @brief   - This function toggles the value of a GPIO pin
  *
- * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ * @param[in] pGPIOx    - base address of the GPIO peripheral
  *            PinNumber - pin number to be toggled
  *
  * @return  - none
@@ -341,7 +341,7 @@ void GPIO_IRQConfig(uint8_t IRQNumber, bool EnorDi) {
  * @brief   - This function configures the IRQ priority of a given IRQ number
  *            (IRQ_NO_EXTI*) in the NVIC
  *
- * @param[in]	IRQNumber   - IRQ number of the EXTI line
+ * @param[in] IRQNumber   - IRQ number of the EXTI line
  *            IRQPriority - IRQ priority number
  *
  * @return  - none
@@ -363,7 +363,7 @@ void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority) {
  * @brief   - This function tests and clears the EXTI pending register of the
  *            GPIO pin number triggering the interrupt
  *
- * @param[in]	PinNumber	- pin number triggering the interrupt
+ * @param[in] PinNumber	- pin number triggering the interrupt
  *
  * @return  - none
  *
