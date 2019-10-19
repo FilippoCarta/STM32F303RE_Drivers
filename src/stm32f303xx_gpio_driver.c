@@ -229,7 +229,7 @@ uint8_t GPIO_ReadInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber) {
  * @brief   - This function reads the value of the GPIO port passed as input
  *            parameter
  *
- * @param[in]	pGPIOx    - base address of the GPIO peripheral
+ * @param[in] pGPIOx    - base address of the GPIO peripheral
  *
  * @return  - port value read from input data register
  *
